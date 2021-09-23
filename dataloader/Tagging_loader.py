@@ -103,7 +103,7 @@ class TC(data.Dataset):
             self.num_parti = self.num_parti + 1
 
             # Reading all fundus images per patient
-            imgs_per_id = glob.glob(dir_imgs + 'tagging/' + str(int(ID[0]))[0:2] + 'xxxxx/' + str(int(ID[0])) + '/*.dcm')
+            imgs_per_id = glob.glob(dir_imgs + 'tagging/' + str(int(ID[0])) + '/*.dcm')
 
             # Taking only one image orientation -> left/right
             img_21015 = [j for j in imgs_per_id if '0' in j]
